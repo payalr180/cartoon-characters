@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { CardList } from './components/card-list/card-list.component';
+import { SearchBar } from './components/search-bar/search-bar.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      cartoons: [],
+      searchField: ''
+    }
+  }
+
+  componentDidMount() {
+    fetch('https://rickandmortyapi.com/api/character')
+      .then(response => response.json())
+      .then(urlData => this.setState({ cartoons: urlData.results }));
+  }
+
+  changeHandler = (e) => {
+    this.setState({ searchField: e.target.value })
+  }
+
+  render() {
+    const {cartoons, searchField} = this.state;
+
+    const filteredCartoons = cartoons.filter(cartoon =>
+      cartoon.name.toLowerCase().includes(searchField.toLowerCase())
+    );
+
+    return (
+      <div className="App">
+        <h1>Rick and Morty</h1>
+        <SearchBar 
+          placeholder = "Search Cartoons"
+          handleChange = { this.changeHandler }/>
+        <br />
+        <CardList cartoons={ filteredCartoons }/>
+      </div>
+    );
+  }
 }
 
 export default App;
