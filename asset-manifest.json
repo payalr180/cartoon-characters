@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cartoon-characters/static/css/main.74e23e82.chunk.css",
+    "main.js": "/cartoon-characters/static/js/main.2baaa272.chunk.js",
+    "main.js.map": "/cartoon-characters/static/js/main.2baaa272.chunk.js.map",
+    "runtime-main.js": "/cartoon-characters/static/js/runtime-main.c71608dc.js",
+    "runtime-main.js.map": "/cartoon-characters/static/js/runtime-main.c71608dc.js.map",
+    "static/js/2.62484750.chunk.js": "/cartoon-characters/static/js/2.62484750.chunk.js",
+    "static/js/2.62484750.chunk.js.map": "/cartoon-characters/static/js/2.62484750.chunk.js.map",
+    "static/js/3.059121c3.chunk.js": "/cartoon-characters/static/js/3.059121c3.chunk.js",
+    "static/js/3.059121c3.chunk.js.map": "/cartoon-characters/static/js/3.059121c3.chunk.js.map",
+    "index.html": "/cartoon-characters/index.html",
+    "static/css/main.74e23e82.chunk.css.map": "/cartoon-characters/static/css/main.74e23e82.chunk.css.map",
+    "static/js/2.62484750.chunk.js.LICENSE.txt": "/cartoon-characters/static/js/2.62484750.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c71608dc.js",
+    "static/js/2.62484750.chunk.js",
+    "static/css/main.74e23e82.chunk.css",
+    "static/js/main.2baaa272.chunk.js"
+  ]
+}
